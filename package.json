@@ -1,0 +1,23 @@
+{
+  "name": "reactuihelper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@reactivex/rxjs": "^6.3.3",
+    "@types/node": "^10.12.2",
+    "@types/react-dom": "^16.0.9",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.18",
+    "parcel": "^1.10.3",
+    "typescript": "^3.1.5"
+  },
+  "scripts": {
+    "start": "parcel serve example/index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
