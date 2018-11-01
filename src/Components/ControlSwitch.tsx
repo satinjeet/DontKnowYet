@@ -12,7 +12,7 @@ export class ControlSwitch extends Component {
         enabled: false
     }
 
-    public render() {
+    protected doRender() {
         return <>
             <input type="radio" name="enable_helper" value="yes" checked={this.state.enabled} onChange={() => {
                 this.setState({ enabled: true })

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import ReactUiHelper from "../../src/index";
+import ReactUiHelper from '../../src/index';
 
 interface ITodoItem {
     title: string;
     completed: boolean;
 }
 
-export class List extends Component {
+export class List extends ReactUiHelper.Component {
     public state: {
         items: ITodoItem[]
      } = {
@@ -18,9 +18,8 @@ export class List extends Component {
         ]
     }
 
-    public render() {
+    protected doRender() {
         return <>
-            <ReactUiHelper.ControlSwitch />
             <ul>
                 {
                     this.state.items.map((i, inex) => {
