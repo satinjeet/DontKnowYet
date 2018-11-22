@@ -1,5 +1,7 @@
 import React from "react";
 import { Component } from './Component';
+import { HelperStream } from './HelperStream';
+import { EnableUiHelperEvent, DisableUiHelperEvent } from '../events/ControlUiHelper.events';
 
 /**
  * Todo think about a name
@@ -21,5 +23,11 @@ export class ControlSwitch extends Component {
                 this.setState({ enabled: false })
             }}/> Disabled
         </>
+    }
+
+    public componentDidUpdate() {
+        HelperStream.next(
+            this.state.enabled ? new EnableUiHelperEvent(): new DisableUiHelperEvent()
+        )
     }
 }
